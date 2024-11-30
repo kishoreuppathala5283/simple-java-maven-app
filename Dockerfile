@@ -7,6 +7,7 @@ WORKDIR /app
 # Copy the pom.xml and other dependencies to the container
 COPY pom.xml .
 
+#Kishore
 # Download dependencies to leverage Docker cache
 RUN mvn dependency:go-offline
 
@@ -21,3 +22,5 @@ EXPOSE 8082
 
 # Command to run the application (adjust based on your app's entry point)
 CMD ["java", "-jar", "target/my-java-app.jar"]
+
+
